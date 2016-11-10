@@ -11,10 +11,6 @@ renderheader($lang['INDEX'], "index");
 
     <body>
         <div class="container container-custom">
-            <div class="border-top"></div>
-            <div class="border-left"></div>
-            <div class="border-right"></div>
-            <div class="border-bottom"></div>
             <h1 class="text-center">Tootal fabrics. Your local partner!</h1>
             <p>
                 <div class="row">
