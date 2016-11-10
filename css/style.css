@@ -4,7 +4,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 
 #con {
@@ -83,7 +83,7 @@ body {
 .container-custom {
     background-color: rgba(124, 124, 124, 0.7);
     color: white;
-    /*border-radius: 20px;*/
+    border-radius: 20px;
 }
 
 #language_flag {
@@ -131,60 +131,6 @@ body {
 ul.nobullet {
   list-style: none;
 }
-
-/*Border*/
-.container-custom {
-    position: relative;
-}
-
-.border-top,
-.border-bottom,
-.border-left,
-.border-right {
-    position: absolute;
-}
-
-.border-top {
-    height: 25px;
-    width: 100%;
-    top: -25px;
-    left: 0;
-    background: url('../images/ui/cont_border.png');
-    background-repeat: repeat;
-    overflow: hidden;
-}
-
-.border-bottom {
-    height: -25px;
-    width: 100%;
-    left: 0;
-    bottom: -25px;
-    background: url('../images/ui/cont_border.png');
-    background-repeat: repeat;
-    overflow: hidden;
-}
-
-.border-left {
-    height: 740px;
-    width: 25px;
-    top: 0;
-    left: -25px;
-    background: url('../images/ui/cont_border.png');
-    background-repeat: repeat;
-    overflow: hidden;
-}
-
-.border-right {
-    height: 1170px;
-    width: 25px;
-    top: 0;
-    right: -25px;
-    background: url('../images/ui/cont_border.png');
-    background-repeat: repeat;
-    overflow: hidden;
-    background-position-x: 25o
-}
-
 
 ul.nobullet {
   list-style: none;
