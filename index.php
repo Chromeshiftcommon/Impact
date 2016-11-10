@@ -5,10 +5,13 @@ renderheader($lang['INDEX'], "index");
  ?>
 
     <div class="container-fluid">
-       <h1><?php echo $lang['PRESENTATION']; ?></h1>
+       <h1 class="text-center"><?php echo $lang['PRESENTATION']; ?></h1>
+       <div class="row">
        <?php echo $lang['INDEXCONTENT']; ?>
+       </div>
     </div>
 
+<<<<<<< HEAD
     <body>
         <div class="container container-custom">
             <h1 class="text-center">Tootal fabrics. Your local partner!</h1>
@@ -41,6 +44,8 @@ renderheader($lang['INDEX'], "index");
                 </div>
             </div>
         </body>
+=======
+>>>>>>> refs/remotes/origin/aron
 
 
 <?php renderfooter(); ?>

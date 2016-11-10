@@ -11,6 +11,8 @@ renderheader("Stiri", "catalog");
  <div class="container-fluid">
    <?php echo $lang['PAGE1']; ?>
    <br><br>
+
+   <?php rendernavigation() ?>
  </div>
 
 <?php renderfooter(); ?>
