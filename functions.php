@@ -37,7 +37,7 @@ function renderheader($title,$active) // Abandon all hope, ye who enter here
                     <ul class="nav navbar-nav">
                         <!--<li><a href="#contact" data-toggle="modal"><button type="button" class="btn btn-custom-active btn-lg navbar-btn"><?php echo $lang['CONTACT']; ?></button></a></li>-->
                         <li><a href="index.php"><button type="button" class="btn btn-custom<?php if ($active == "index") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['INDEX']; ?></button></a></li>
-                        <li><a href="catalog.php"><button type="button" class="btn btn-custom<?php if ($active == "catalog") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['CATALOG']; ?></button></a></li>
+                        <li><a href="news1.php"><button type="button" class="btn btn-custom<?php if ($active == "catalog") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['CATALOG']; ?></button></a></li>
                         <li><a href="gallery.php"><button type="button" class="btn btn-custom<?php if ($active == "gallery") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['GALLERY']; ?></button></a></li>
                         <li><a href="design.php"><button type="button" class="btn btn-custom<?php if ($active == "design") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['DESIGN']; ?></button></a></li>
                         <li><a href="quality.php"><button type="button" class="btn btn-custom<?php if ($active == "quality") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['QUALITY']; ?></button></a></li>
@@ -107,18 +107,48 @@ function renderheader($title,$active) // Abandon all hope, ye who enter here
             </div>
         </div>
 
-          <div class="transbox">
-            <div class="crochet">
+        <div class="container container-custom">
+          <div class="border-top"></div>
+          <div class="border-left"></div>
+          <div class="border-right"></div>
+          <div class="border-bottom"></div>
 <?php
 }
 
 function renderfooter() // Says what it says it does.
 { ?>
-  </div>
-  </div>
 
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="js/bootstrap.js"></script>
 </body>
 </html>
-<?php } ?>
+<?php }
+
+function rendernavigation()
+{ ?>
+  <script>
+  pgstring = window.location.href;
+  var pgnum = pgstring.match(/\d/g);
+  if (pgnum != 1)
+  {
+    document.write ("<a class=\"incontent\" href=\"news" + (pgnum-1) + ".php\"> &larr; Previous</a> &nbsp; ");
+  }
+  for (var i=1; i<=8;i++) {
+    document.write ("<a class=\"incontent");
+    if (i==pgnum) { document.write("-active");}
+    document.write ("\" href=\"news" + i + ".php\">" + i + "</a>" + "&nbsp;&nbsp;");
+  }
+  if (pgnum != 8)
+  {
+    document.write ("<a class=\"incontent\" href=\"news" + (parseInt(pgnum)+parseInt(1)) + ".php\">Next &rarr; </a> ");
+  }
+  </script>
+  <br><br>
+<?php }
+
+?>

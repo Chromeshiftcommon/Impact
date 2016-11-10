@@ -9,8 +9,10 @@ renderheader("Stiri", "catalog");
  </h1>
  </div>
  <div class="container-fluid">
-   <?php echo $lang['PAGE1']; ?>
+   <?php echo $lang['PAGE5']; ?>
    <br><br>
- </div>
+
+ <?php rendernavigation() ?>
+  </div>
 
 <?php renderfooter(); ?>
