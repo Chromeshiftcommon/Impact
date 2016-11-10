@@ -31,11 +31,6 @@ body {
   text-align: center;
 }
 
-/*nav a {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}*/
-
 .navbar-brand {
     margin-top: 20px;
 }
@@ -120,7 +115,7 @@ body {
     margin-bottom: -2px;
 }
 
-#ctext1 {
+.ctext1 {
     font-size: 20px;
 }
 
@@ -194,4 +189,18 @@ ul.nobullet {
   opacity: 0.8;
   transform-origin: 25% 50%;
   transform: scale(1.095, 1.095);
+}
+
+a.incontent {
+  color: #111;
+  text-decoration: underline;
+}
+
+a.incontent:hover {
+  color: #fff;
+}
+
+a.incontent-active {
+  color: #fff;
+  text-decoration: underline;
 }
