@@ -47,5 +47,4 @@ renderheader($lang['INDEX'], "index");
 =======
 >>>>>>> refs/remotes/origin/aron
 
-
 <?php renderfooter(); ?>

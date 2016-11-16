@@ -2,18 +2,14 @@
 include_once 'common.php';
 include_once 'functions.php';
 include_once 'languages/lang.ro.news.php';
-renderheader("Stiri", "catalog");
+renderheader("Tootal interlining for shirts", "catalog");
  ?>
  <div class="container-fluid">
- <h1>
-     <?php echo $lang['CATALOG'];?>
- </h1>
- </div>
- <div class="container-fluid">
-   <?php echo $lang['PAGE1']; ?>
+   <br>
+   <?php echo $lang['INTERLINING']; ?>
    <br><br>
-
-   <?php rendernavigation() ?>
+ <a class="incontent" href="news5.php">Back to the news page</a>
+ <br><br>
  </div>
 
 <?php renderfooter(); ?>
