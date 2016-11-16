@@ -116,15 +116,32 @@ function renderheader($title,$active) // Abandon all hope, ye who enter here
 }
 
 function renderfooter() // Says what it says it does.
-{ ?>
+{
+  global $lang; ?>
 
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div><br>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  <footer id="parent" class="footer-distributed">
+  <div class="footer-left">
+    <h4>Navigare</h4>
+    <p class="footer-links">
+					<a href="index.php"><?php echo $lang['INDEX']; ?></a><br>
+					<a href="news1.php"><?php echo $lang['CATALOG']; ?></a><br>
+					<a href="gallery.php"><?php echo $lang['GALLERY']; ?></a><br>
+					<a href="design.php"><?php echo $lang['DESIGN']; ?></a><br>
+					<a href="quality.php"><?php echo $lang['QUALITY']; ?></a><br>
+		</p>
+  </div>
+  <div class="footer-center">
+    <h4>Contact<h4>
+      TODO
+  </div>
+  <div class="child footer-right">
+    <p>&copy; Impact Mode 2016 <br>
+    Developed by ChromeShift</p>
+  </div>
+</footer>
 </body>
 </html>
 <?php }
