@@ -11,7 +11,6 @@ renderheader("Gallery", "gallery");
 
  <div class="container">
      <h2>Gallery</h2>
-     <p>Image including, see how well this webpage can cope with it. Also some PHP to mess shit up.</p>
  </div>
 <br>
 

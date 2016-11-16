@@ -12,5 +12,4 @@ renderheader($lang['INDEX'], "index");
     </div>
 
 
-
 <?php renderfooter(); ?>
