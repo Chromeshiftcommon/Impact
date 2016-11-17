@@ -135,7 +135,11 @@ function renderfooter() // Says what it says it does.
   </div>
   <div class="footer-center">
     <h4>Contact<h4>
-      TODO
+      <br>
+      Comuna Livezeni, Nr. 279, Corp II., Etaj II., 547365, Jud. Mureş <br>
+      Tel./fax:	+40 265 260 392 <br>
+      Mobil:	+40 720 534 285<br>
+      E-mail:	office@impactmode.ro<br>
   </div>
   <div class="child footer-right">
     <p>&copy; Impact Mode 2016 <br>
