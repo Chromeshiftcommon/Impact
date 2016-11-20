@@ -13,7 +13,7 @@ renderheader("Stiri", "catalog");
    <?php echo $lang['PAGE5']; ?>
    <br><br>
 
- <?php rendernavigation() ?>
+ <?php rendernavigation(8,"news") ?>
   </div>
 
 <?php renderfooter(); ?>

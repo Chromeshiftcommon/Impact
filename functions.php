@@ -35,18 +35,18 @@ function renderheader($title,$active) // Abandon all hope, ye who enter here
                 <!--Navbar Links-->
                 <div class="collapse navbar-collapse" id="navbartopcollapse">
                     <ul class="nav navbar-nav">
-                        <!--<li><a href="#contact" data-toggle="modal"><button type="button" class="btn btn-custom-active btn-lg navbar-btn"><?php echo $lang['CONTACT']; ?></button></a></li>-->
                         <li><a href="index.php"><button type="button" class="btn btn-custom<?php if ($active == "index") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['INDEX']; ?></button></a></li>
                         <li><a href="news1.php"><button type="button" class="btn btn-custom<?php if ($active == "catalog") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['CATALOG']; ?></button></a></li>
                         <li><a href="gallery.php"><button type="button" class="btn btn-custom<?php if ($active == "gallery") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['GALLERY']; ?></button></a></li>
                         <li><a href="design.php"><button type="button" class="btn btn-custom<?php if ($active == "design") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['DESIGN']; ?></button></a></li>
                         <li><a href="quality.php"><button type="button" class="btn btn-custom<?php if ($active == "quality") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['QUALITY']; ?></button></a></li>
+                        <li><a href="facts1.php"><button type="button" class="btn btn-custom<?php if ($active == "facts") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['FACTS']; ?></button></a></li>
                         <li><a href="#contact" data-toggle="modal"><button type="button" class="btn btn-custom<?php if ($active == "contact") echo "-active" ?> btn-lg navbar-btn"><?php echo $lang['CONTACT']; ?></button></a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <a href="#" class="dropdown-toggle btn btn-custom-active btn-lg navbar-btn" data-toggle="dropdown" role="button"><?php echo $lang['LANGUAGE']; ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu inverse-dropdown" role="menu">
-                            <li><a href="?lang=en"><img id="language_flag" src="images/ui/usa.png"> <?php echo $lang['ENG']; ?> </a></li>
+                            <li><a href="?lang=en"><img id="language_flag" src="images/ui/uk.png"> <?php echo $lang['ENG']; ?> </a></li>
                             <li><a href="?lang=ro"><img id="language_flag" src="images/ui/ro.png"> <?php echo $lang['ROU']; ?> </a></li>
                         </ul>
                     </ul>
@@ -119,57 +119,60 @@ function renderfooter() // Says what it says it does.
 {
   global $lang; ?>
 
-</div><br>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <footer id="parent" class="footer-distributed">
-  <div class="footer-left">
-    <h4>Navigare</h4>
-    <p class="footer-links">
-					<a href="index.php"><?php echo $lang['INDEX']; ?></a><br>
-					<a href="news1.php"><?php echo $lang['CATALOG']; ?></a><br>
-					<a href="gallery.php"><?php echo $lang['GALLERY']; ?></a><br>
-					<a href="design.php"><?php echo $lang['DESIGN']; ?></a><br>
-					<a href="quality.php"><?php echo $lang['QUALITY']; ?></a><br>
-		</p>
-  </div>
-  <div class="footer-center">
-    <h4>Contact<h4>
-      <br>
-      Comuna Livezeni, Nr. 279, Corp II., Etaj II., 547365, Jud. Mureş <br>
-      Tel./fax:	+40 265 260 392 <br>
-      Mobil:	+40 720 534 285<br>
-      E-mail:	office@impactmode.ro<br>
-  </div>
-  <div class="child footer-right">
-    <p>&copy; Impact Mode 2016 <br>
-    Developed by ChromeShift</p>
-  </div>
-</footer>
-</body>
-</html>
-<?php }
+    </div><br>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <footer id="parent" class="footer-distributed">
+      <div class="footer-left">
+        <h4>Navigare</h4>
+        <p class="footer-links">
+    					<a href="index.php"><?php echo $lang['INDEX']; ?></a><br>
+    					<a href="news1.php"><?php echo $lang['CATALOG']; ?></a><br>
+    					<a href="gallery.php"><?php echo $lang['GALLERY']; ?></a><br>
+    					<a href="design.php"><?php echo $lang['DESIGN']; ?></a><br>
+    					<a href="quality.php"><?php echo $lang['QUALITY']; ?></a><br>
+    		</p>
+      </div>
+      <div class="footer-center">
+        <h4>Contact<h4>
+          <br>
+          Comuna Livezeni, Nr. 279, Corp II., Etaj II., 547365, Jud. Mureş <br>
+          Tel./fax:	+40 265 260 392 <br>
+          Mobil:	+40 720 534 285<br>
+          E-mail:	office@impactmode.ro<br>
+      </div>
+      <div class="child footer-right">
+        <p>&copy; Impact Mode 2016 <br>
+        Developed by ChromeShift</p>
+      </div>
+    </footer>
+    </body>
+    </html>
+    <?php }
 
-function rendernavigation()
+function rendernavigation($pages,$page)
 { ?>
   <script>
+  var pages = "<?php echo $pages; ?>"
+  var page = "<?php echo $page; ?>"
   pgstring = window.location.href;
   var pgnum = pgstring.match(/\d/g);
   if (pgnum != 1)
   {
-    document.write ("<a class=\"incontent\" href=\"news" + (pgnum-1) + ".php\"> &larr; Previous</a> &nbsp; ");
+    document.write ("<a class=\"incontent\" href=\"" + page + (pgnum-1) + ".php\"> &larr; Previous</a> &nbsp; ");
   }
-  for (var i=1; i<=8;i++) {
+  for (var i=1; i<=pages;i++) {
     document.write ("<a class=\"incontent");
     if (i==pgnum) { document.write("-active");}
-    document.write ("\" href=\"news" + i + ".php\">" + i + "</a>" + "&nbsp;&nbsp;");
+    document.write ("\" href=\"" + page + i + ".php\">" + i + "</a>" + "&nbsp;&nbsp;");
   }
-  if (pgnum != 8)
+  if (pgnum != pages)
   {
-    document.write ("<a class=\"incontent\" href=\"news" + (parseInt(pgnum)+parseInt(1)) + ".php\">Next &rarr; </a> ");
+    document.write ("<a class=\"incontent\" href=\"" + page + (parseInt(pgnum)+parseInt(1)) + ".php\">Next &rarr; </a> ");
   }
   </script>
   <br><br>
 <?php }
+
 
 ?>

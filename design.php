@@ -27,7 +27,7 @@ renderheader("Design your own shirt! ", "design");
         }
         </script>
         <h1>
-            <?php echo 'Design your own shirt! ' ;?>
+            <?php echo $lang['DESIGNCONTENT'];?>
         </h1>
         <div class="container-fluid">
         <ul class="row-img nobullet">

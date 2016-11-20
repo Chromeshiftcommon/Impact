@@ -1,19 +1,19 @@
 <?php
 include_once 'common.php';
 include_once 'functions.php';
-include_once 'languages/lang.ro.news.php';
-renderheader("Stiri", "catalog");
+include_once 'languages/lang.ro.facts.php';
+renderheader($lang['FACTS'], "facts");
  ?>
  <div class="container-fluid">
  <h1>
-     <?php echo $lang['CATALOG'];?>
+     <?php echo $lang['FACTS'];?>
  </h1>
  </div>
  <div class="container-fluid">
-   <?php echo $lang['PAGE6']; ?>
+   <?php echo $lang['FACTS5']; ?>
    <br><br>
 
-   <?php rendernavigation(8,"news") ?>
+   <?php rendernavigation(6,"facts") ?>
  </div>
 
 <?php renderfooter(); ?>
