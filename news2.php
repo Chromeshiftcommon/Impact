@@ -14,6 +14,6 @@ renderheader("Stiri", "catalog");
    <br><br>
 
 
- <?php rendernavigation() ?>
+ <?php rendernavigation(8,"news") ?>
  </div>
 <?php renderfooter(); ?>

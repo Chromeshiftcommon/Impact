@@ -12,7 +12,7 @@ renderheader("Stiri", "catalog");
  <div class="container-fluid">
    <?php echo $lang['PAGE4']; ?>
    <br><br>
-   <?php rendernavigation() ?>
+   <?php rendernavigation(8,"news") ?>
   </div>
 
 <?php renderfooter(); ?>
