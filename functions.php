@@ -144,6 +144,7 @@ function renderfooter() // Says what it says it does.
       <div class="child footer-right">
         <p>&copy; Impact Mode 2016 <br>
         Developed by ChromeShift</p>
+        <p>This page is best viewed with a browser that is NOT Internet Explorer. Please keep this in mind while browsing. </p>
       </div>
     </footer>
     </body>
