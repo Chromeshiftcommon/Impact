@@ -19,12 +19,11 @@ renderheader("Gallery", "gallery");
     <div class="container-fluid" id="gallery">
         <div class="gallery">
             <div class="row">
+              <?php for ($i=1; $i <=13 ; $i++) { ?>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <a href="gallery/Image%20(1).jpg" data-title="" data-lightbox="First"><img src="gallery/Image%20(1).jpg" class="img-responsive img-thumbnail"></a>
+                    <a href="gallery/<?php echo $i; ?>.jpg" data-title="" data-lightbox="First"><img src="gallery/<?php echo $i; ?>.jpg" class="img-responsive img-thumbnail"></a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <a href="gallery/Image%20(2).jpg" data-title="" data-lightbox="First"><img src="gallery/Image%20(2).jpg" class="img-responsive img-thumbnail"></a>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -62,13 +61,6 @@ renderheader("Gallery", "gallery");
     $('li img').on('click',function(){
          var src = $(this).attr('src');
          var img = '<img src="' + src + '" class="img-responsive"/>';
-        /* var index = $(this).parent('li').index();
-         var html = '';
-         html += img;
-         html += '<div style="height:25px;clear:both;display:block;">';
-         html += '<a class="controls next" href="'+ (index+2) + '">next &raquo;</a>';
-         html += '<a class="controls previous" href="' + (index) + '">&laquo; prev</a>';
-         html += '</div>';*/
          $('#myModal').modal();
          $('#myModal').on('shown.bs.modal', function(){
              $('#myModal .modal-body').html(img);

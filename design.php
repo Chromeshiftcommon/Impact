@@ -11,7 +11,7 @@ renderheader("Design your own shirt! ", "design");
           else
             document.getElementById("pic").src = "ruhaszinek/" + dress + ".jpg";
         }
-        function hey()
+        function hey() // Rewritten indices for server
         {
           imgsrc = document.getElementById("pic").src;
           if (imgsrc.includes("con"))
@@ -22,7 +22,7 @@ renderheader("Design your own shirt! ", "design");
           else
           {
             imgsrc = imgsrc.split(".");
-            document.getElementById("pic").src = imgsrc[0] + "con." + imgsrc[1];
+            document.getElementById("pic").src = imgsrc[0] + "." + imgsrc[1] + "con." + imgsrc[2];
           }
         }
         </script>
@@ -47,6 +47,16 @@ renderheader("Design your own shirt! ", "design");
                 <input type="checkbox" id="check" onclick="hey();">
                 <div class="slider round"></div>
                 </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <br><br><a href="pdfs/basecontrast.pdf"><button type="button" class="btn">1. Example base and contrast fabric print</button></a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <br><a href="pdfs/selection.pdf"><button type="button" class="btn">2. Example selection fabrics print</button></a>
               </td>
             </tr>
           </table>
