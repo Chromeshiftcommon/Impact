@@ -27,10 +27,14 @@ $lang = 'en';
 switch ($lang) {
   case 'en':
   $lang_file = 'lang.en.php';
+  $lang_news = 'lang.en.news.php';
+  $lang_facts = 'lang.en.facts.php';
   break;
 
   case 'ro':
   $lang_file = 'lang.ro.php';
+  $lang_news = 'lang.ro.news.php';
+  $lang_facts = 'lang.ro.facts.php';
   break;
 
   //case 'hu':
@@ -39,8 +43,16 @@ switch ($lang) {
 
   default:
   $lang_file = 'lang.ro.php';
+  $lang_news = 'lang.ro.news.php';
+  $lang_facts = 'lang.ro.facts.php';
 
 }
 
 include_once 'languages/'.$lang_file;
+// Checking if it is a news of facts page - including the correct files if so
+$pagename = basename($_SERVER['PHP_SELF']);
+if (strpos($pagename,'news') !== false)
+  include_once 'languages/'.$lang_news;
+if (strpos($pagename,'facts') !== false)
+  include_once 'languages/'.$lang_facts;
 ?>

@@ -3,6 +3,13 @@ include_once 'common.php';
 include_once 'functions.php';
 renderheader("Design your own shirt! ", "design");
  ?>
+        <style> /*a bit different for this page */
+        .container-custom {
+            background-color: rgba(255,255,255, 1);
+            color: rgba(0,0,0,1);
+            border-radius: 20px;
+        }
+        </style>
         <script type="text/javascript">
         function changeColor(dress)
         {
@@ -51,12 +58,12 @@ renderheader("Design your own shirt! ", "design");
             </tr>
             <tr>
               <td>
-                <br><br><a href="pdfs/basecontrast.pdf"><button type="button" class="btn">1. Example base and contrast fabric print</button></a>
+                <br><br><a href="pdfs/basecontrast.pdf"><button type="button" class="btn-design">1. Example base and contrast fabric print</button></a>
               </td>
             </tr>
             <tr>
               <td>
-                <br><a href="pdfs/selection.pdf"><button type="button" class="btn">2. Example selection fabrics print</button></a>
+                <br><a href="pdfs/selection.pdf"><button type="button" class="btn-design">2. Example selection fabrics print</button></a>
               </td>
             </tr>
           </table>
